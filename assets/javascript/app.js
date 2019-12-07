@@ -63,9 +63,9 @@ var themes = ["Dragon Ball Z", "FLCL", "Hamtaro", "Naruto", "ONe Piece", "Pokemo
             // iterate through all the results limited to 10 gifs
             for (var i = 0; i < themeResults.length; i++){
                 //put gifs in a div
-                var gifDiv = $("<div1>");
+                var gifDiv = $("<div>");
                 //pull rating of gif
-                var gifRating = $("<p>").text("Gif Rating: " + themeResults[i].rating);
+                var gifRating = $("<p>").text("Rating: " + themeResults[i].rating);
                 gifDiv.append(gifRating);
     
                 //pull gif
