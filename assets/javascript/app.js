@@ -33,8 +33,8 @@ var themes = ["Dragon Ball Z", "FLCL", "Hamtaro", "Naruto", "ONe Piece", "Pokemo
             });
     }
     
-    //function to remove last button
-    function removeLastButton() {
+    //function to reset button
+    function resetButton() {
         $("removeGif").on("click", function() {
             themes.pop(anime);
             displayGifButtons();
@@ -46,7 +46,7 @@ var themes = ["Dragon Ball Z", "FLCL", "Hamtaro", "Naruto", "ONe Piece", "Pokemo
     // display gif function
     function displayGifs() {
         var anime = $(this).attr("data-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + anime + "&api_key=rFCusnMyFTu6qDGA1w4jYaExlAiwVHGK&limit=10&rating=g&lang=en";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + anime + "&api_key=rFCusnMyFTu6qDGA1w4jYaExlAiwVHGK&limit=12&rating=g&lang=en";
         
         $.ajax({
             url: queryURL,
@@ -70,11 +70,11 @@ var themes = ["Dragon Ball Z", "FLCL", "Hamtaro", "Naruto", "ONe Piece", "Pokemo
     
                 //pull gif
                 var gifImage = $("<img>");
-                gifImage.attr("src", themeResults[i].images.fixed_height_small_still.url);
+                gifImage.attr("src", themeResults[i].images.fixed_height_still.url);
                 //paused images
-                gifImage.attr("data-still", themeResults[i].images.fixed_height_small_still.url);
+                gifImage.attr("data-still", themeResults[i].images.fixed_height_still.url);
                 //animated images
-                gifImage.attr("data-animate", themeResults[i].images.fixed_height_small.url);
+                gifImage.attr("data-animate", themeResults[i].images.fixed_height.url);
                 //how images come in, already paused
                 gifImage.attr("data-state", "still");
                 gifImage.addClass("image");
@@ -89,7 +89,7 @@ var themes = ["Dragon Ball Z", "FLCL", "Hamtaro", "Naruto", "ONe Piece", "Pokemo
     //list of already created animes
     displayGifButtons();
     addNewButton();
-    removeLastButton();
+    resetButton();
     
 //     var input = $( ":button" ).addClass( "marked" );
 // $( "div" ).text( "For this type jQuery found " + input.length + "." );
