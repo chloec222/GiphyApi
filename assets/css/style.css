@@ -6,7 +6,7 @@ body{
     color: #5a5a5a;
 }
 
-img{
+.img-fluid{
     width:100%;
     height:auto;
 }
@@ -22,4 +22,23 @@ img{
 footer{
     font-family: 'Lato', sans-serif;
     color: #cccccc;
+}
+
+.image{
+    width:24em;
+    height:18em;    
+}
+
+p{
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    color: #8d8c8c;
+    text-align: center;
+    font-size: 1em;
+    padding-top: 3em;
+    border-bottom:1px dashed #dbdbdb;
+}
+
+button{
+    margin: .5em;
 }
