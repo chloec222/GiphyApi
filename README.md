@@ -9,4 +9,4 @@ Applications Used:
 --------------------------------------------------------------------------------------------------------------------------------------
 
 ### GIPHY | *[Main]* |
-![Image of main](/assets/images/gif.jpg)
+![Image of main](/assets/animegiphy/gif.jpg)
