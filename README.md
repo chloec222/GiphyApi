@@ -2,6 +2,7 @@
 ### Overview
 A fun giphy app that allows users to filter through the anime category of the Giphy API
 
+Link: https://chloec222.github.io/TriviaGame/
 
 Applications Used:
 - [x] GIPHY API
